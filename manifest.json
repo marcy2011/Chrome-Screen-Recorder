@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Screen Recorder",
+  "version": "1.0",
+  "description": "Record the current tab screen with one click",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "tabCapture",
+    "activeTab",
+    "tabs",
+    "downloads",
+    "offscreen",
+    "storage",
+    "contextMenus",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Start / Stop recording",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["cursor.svg"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
